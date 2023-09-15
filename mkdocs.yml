@@ -1,6 +1,6 @@
 site_name: MkDocs Tutorial 
 repo_url: https://github.com/ar4develop/mkdocs_exp
-site_url: https://ar4develop.github.io/mkdocs_exp/
+site_url: https://ar4develop.github.io/mkdocs_exp/site
 edit_uri: ""
 
 # Navigation menu        
@@ -41,7 +41,7 @@ nav:
 
   - FAQ: 
     - _about/faq.md
-    
+
   - Links: 
     - _about/links.md  
   
@@ -83,8 +83,8 @@ theme:
     annotation: material/arrow-right-circle      
     repo: fontawesome/brands/github    
 
-  font:
-    text: Lexend
+  #font:
+  #  text: Lexend
 
   logo: assets/logo.png
   favicon: assets/logo_fav.png
@@ -97,7 +97,7 @@ theme:
     - navigation.tracking # динамический URL страницы 
     - navigation.tabs # перенос названий документов в горизонтальное меню
     - navigation.tabs.sticky # горизонтальное меню не скрывается при прокрутке
-    #- navigation.indexes # главные страницы разделов не отображаются в меню
+    - navigation.indexes # главные страницы разделов не отображаются в меню
     - navigation.top # вкл. кнопку возврата наверх  
     - navigation.sections # When sections are enabled, top-level sections are rendered as groups in the sidebar for viewports above 1220px, but remain as-is on mobile
     - navigation.expand # When expansion is enabled, the left sidebar will expand all collapsible subsections by default, so the user doesn't have to open subsections manually
