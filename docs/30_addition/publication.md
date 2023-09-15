@@ -39,7 +39,7 @@ Local article
 
 7. В GitHub переходим на вкладку **Actions** и нажимаем на кнопку **Configure** на карточке **Simple workflow**.
 
-8. Переименуем файл *blank.yml* в *main.yml*, вставим следующие строки и нажмем на кнопку **Commit changes…**.
+8. Переименуем файл *blank.yml* в *main.yml*, вставим следующие строки и нажмем на кнопку **Commit changes…**.  Path to *main.yml* <https://github.com/ar4develop/mkdocs_exp/tree/main>.
 
 ```
 name: ci 
@@ -65,6 +65,12 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
+      - run: pip install mkdocs-glightbox
+      - run: pip install mkdocs-print-site-plugin
+      - run: pip install http html5lib requests
+      - run: pip install htmlark
+      - run: pip install mkdocs-table-reader-plugin
+      - run: pip install openpyxl
       - run: mkdocs gh-deploy --force
 ```
 

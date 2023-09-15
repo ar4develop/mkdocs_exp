@@ -1,45 +1,48 @@
 site_name: MkDocs Tutorial 
+repo_url: https://github.com/ar4develop/mkdocs_exp
+site_url: https://ar4develop.github.io/mkdocs_exp/
+edit_uri: ""
 
 # Navigation menu        
 nav:
   - Home: 
     - index.md
-    #- About: '_about/about.md'
-    #- Install: '10_start/install.md'
-    #- Writing MkDocs standart:  '20_syntax/standart.md'
-    #- Advanced. Theme Material: '20_syntax/advance.md'
-    #- Export docs: '30_addition/export_print_site.md'
-    #- Publication: '30_addition/publication.md'
-    #- Links: '_about/links.md'  
-    #- FAQ:   '_about/faq.md'  
+    # - About: '_about/about.md'
+    # - Install: '10_start/install.md'
+    # - Writing MkDocs standart:  '20_syntax/standart.md'
+    # - Advanced. Theme Material: '20_syntax/advance.md'
+    # - Export docs: '30_addition/export_print_site.md'
+    # - Publication: '30_addition/publication.md'
+    # - Links: '_about/links.md'  
+    # - FAQ:   '_about/faq.md'  
     
-  #- About: '_about/about.md'
+  - About: '_about/about.md'
 
-  #- Getting started: 
-  #  - 10_start/install.md
+  - Getting started: 
+    - 10_start/install.md
     
-  # - Writing docs: 
-  #   - 20_syntax/index.md
+  - Writing docs: 
+    - 20_syntax/basic.md
 
-  # - Advanced:     
-  #   - 20_syntax/advance.md
-  #   #- Diagrams: '20_syntax/21_diagrams.md'
-  #   - 20_syntax/customize.md
+  - Advanced:     
+    - 20_syntax/advance.md
+    #- Diagrams: '20_syntax/21_diagrams.md'
+    - 20_syntax/customize.md
 
-  #- Export docs:
-    #- 30_addition/export_print_site.md
-    #- 30_addition/export_with_pdf.md
-    #- 30_addition/export_pdf_export.md
-    #- 30_addition/weasyprint.md
+  - Export docs:
+    - 30_addition/export_print_site.md
+    - 30_addition/export_with_pdf.md
+    - 30_addition/export_pdf_export.md
+    - 30_addition/weasyprint.md
     
-  # - Publication:
-  #   - 30_addition/publication.md
+  - Publication:
+    - 30_addition/publication.md
 
-  # - FAQ: '_about/faq.md'
-  # - Links: '_about/links.md'  
+  - FAQ: '_about/faq.md'
+  - Links: '_about/links.md'  
   
 theme:
- 
+
   name: material #mkdocs #readthedocs  #material
   custom_dir: overrides
 
@@ -74,6 +77,10 @@ theme:
 
   icon:
     annotation: material/arrow-right-circle      
+    repo: fontawesome/brands/github    
+
+  font:
+    text: Lexend
 
   logo: assets/logo.png
   favicon: assets/logo_fav.png
@@ -234,7 +241,7 @@ plugins:
       path_to_pdf: "MkDocs_Tutorial.pdf" # Путь к сгенерированному PDF-документу
       include_css: true # Включает переопределение дефолтных CSS с целью кастомизации
       # Включает плагин
-      enabled: false # /!ENV [ENABLED_PRINT_SITE, True] #Commands: export ENABLED_PRINT_SITE=false; mkdocs serve
+      enabled: true # /!ENV [ENABLED_PRINT_SITE, True] #Commands: export ENABLED_PRINT_SITE=false; mkdocs serve
       #exclude: # Исключает страницы из PDF
       #- index.md    
 

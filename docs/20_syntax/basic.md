@@ -52,13 +52,19 @@ Three line
 ## Emphasis 
 Markdown treats asterisks (*) and underscores (_) as indicators of emphasis. Text wrapped with one * or _ will be wrapped with an HTML `<em>` tag; double *’s or _’s will be wrapped with an HTML `<strong>` tag. E.g., this input:
 
-    *single asterisks*
-    **double asterisks**
+```
+**This is bold text**   
+*This is italic text*   
+***This is bold italic text***  
+~~this is strikethrough~~   
+~~***This is strikethrough bold italic text***~~    
+```
 
-*single asterisks* <br/>
-_single underscores_ <br/>
-**double asterisks** <br/>
-__double underscores__ <br/>
+**This is bold text**   
+*This is italic text*   
+***This is bold italic text***  
+~~this is strikethrough~~   
+~~***This is strikethrough bold italic text***~~    
 
 Emphasis can be used in the middle of a word:
 
@@ -143,11 +149,11 @@ To improve platform compatibility (and to save one keystroke) it is also possibl
 
 ### Span element Links
 
-    This is [an example](http://example.com/ "Title") inline link.
+    This is [an example](http://example.com/ "Title") inline link and e-mail: <alnoda@alnoda.com>.
 
     [This link](http://example.net/) has no title attribute.
 
-This is [an example](http://example.com/ "Title") inline link.    
+This is [an example](http://example.com/ "Title") inline link and e-mail: <alnoda@alnoda.com>.    
 [This link](http://example.net/) has no title attribute.
 
     See my [About](../_about/about/) page for details. 
@@ -422,4 +428,4 @@ Markdown provides backslash escapes for the following characters:
     .   dot
     !   exclamation mark
 
-
+## Hack the markdown

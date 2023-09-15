@@ -44,11 +44,13 @@ plugins:
 <https://openpyxl.readthedocs.io/en/stable/tutorial.html>   
 `pip install openpyxl`
 
-+ *Export PDF*    
++ *Export PDF, HTML*    
 mkdocs-print-site-plugin    
 <https://github.com/timvink/mkdocs-print-site-plugin>   
 <https://timvink.github.io/mkdocs-print-site-plugin/print_page.html>    
 `pip install mkdocs-print-site-plugin`
+`pip install http html5lib requests`    
+`pip install htmlark`
 
 + *Lightbox For Enlarge image*    
 <https://github.com/blueswen/mkdocs-glightbox>   

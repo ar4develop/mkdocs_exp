@@ -68,7 +68,9 @@ Keyboard keys
 
 ## Icons, Emojis
 
-Source link: <https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/>
+Source links: 
+<https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/>   
+<https://mkdocs-magicspace.alnoda.org/tutorials/markdown/classy-markdown/>  
 
 Local article [Icons, Emojis.](../_articles/Icons, Emojis - Material for MkDocs.html)
 
