@@ -16,7 +16,8 @@ nav:
     # - Links: '_about/links.md'  
     # - FAQ:   '_about/faq.md'  
     
-  - About: '_about/about.md'
+  - About: 
+    -_about/about.md
 
   - Getting started: 
     - 10_start/install.md
@@ -38,8 +39,10 @@ nav:
   - Publication:
     - 30_addition/publication.md
 
-  - FAQ: '_about/faq.md'
-  - Links: '_about/links.md'  
+  - FAQ: 
+    -_about/faq.md
+  - Links: 
+    - _about/links.md  
   
 theme:
 
@@ -93,7 +96,7 @@ theme:
     - navigation.tracking # динамический URL страницы 
     - navigation.tabs # перенос названий документов в горизонтальное меню
     - navigation.tabs.sticky # горизонтальное меню не скрывается при прокрутке
-    - navigation.indexes # главные страницы разделов не отображаются в меню
+    #- navigation.indexes # главные страницы разделов не отображаются в меню
     - navigation.top # вкл. кнопку возврата наверх  
     - navigation.sections # When sections are enabled, top-level sections are rendered as groups in the sidebar for viewports above 1220px, but remain as-is on mobile
     - navigation.expand # When expansion is enabled, the left sidebar will expand all collapsible subsections by default, so the user doesn't have to open subsections manually
