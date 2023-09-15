@@ -8,7 +8,10 @@
 
 .md-nav
 {
-  padding-top: 10px;
+   margin-bottom: 10px;
+   /* margin-top: 10px;  */
+
+  padding-top: 5px; 
   padding-bottom: 10px;
 
   /* border-block: solid;
@@ -17,7 +20,8 @@
 
 .md-nav--primary
 {
-   background-color:  rgba(59, 128, 132, 0.5); 
+  
+  background-color:  rgba(59, 128, 132, 0.5); 
   /* background-color: teal; */
 }
 

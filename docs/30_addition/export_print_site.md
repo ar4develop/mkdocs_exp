@@ -225,8 +225,6 @@ You can also customize the base mkdocs theme, by overriding main.html.
 
 === "docs/overrides/main.html"
     ```
-    {% extends "base.html" %}
-
     {% block repo %}
         {% if page.url_to_pdf %}
             <li class="nav-item">

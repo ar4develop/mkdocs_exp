@@ -39,7 +39,7 @@ Local article
 
 7. В GitHub переходим на вкладку **Actions** и нажимаем на кнопку **Configure** на карточке **Simple workflow**.
 
-8. Переименуем файл *mkdoks.yml* в *main.yml*, вставим следующие строки и нажмем на кнопку **Commit changes…**.
+8. Переименуем файл *blank.yml* в *main.yml*, вставим следующие строки и нажмем на кнопку **Commit changes…**.
 
 ```
 name: ci 
