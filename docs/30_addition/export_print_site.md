@@ -192,16 +192,16 @@ In the mkdocs-material theme you can create an override for main.html (see custo
     ```
 === "docs/overrides/main.html"
     ```
-    `{% block content %}`
+    /{/% block content /%/}
 
-    `{% if page.url_to_pdf %}`
+    /{/% if page.url_to_pdf /%/}
         <a href="{{ page.url_to_pdf }}" title="Site PDF" class="md-content__button md-icon">
-            {% include ".icons/material/file-pdf-box.svg" %}
+            /{/% include ".icons/material/file-pdf-box.svg" /%/}
         </a>
-    `{% endif %}`
+    /{/% endif /%/}
 
-    {{ super() }}
-    `{% endblock content %}`
+    /{/{ super() /}/}
+    /{/% endblock content /%/}
     ```
 
 ## Adding a print button to mkdocs theme
@@ -223,17 +223,17 @@ You can also customize the base mkdocs theme, by overriding main.html.
 
 === "docs/overrides/main.html"
     ```
-    `{% block repo %}`
-        `{% if page.url_to_pdf %}`
+    /{/% block repo /%/}
+        /{/% if page.url_to_pdf /%/}
             <li class="nav-item">
                 <a href="{{ page.url_to_pdf }}" title="Site PDF" class="nav-link">
                 <i class="fas fa-file-pdf"></i> PDF
                 </a>
             </li>
-        `{% endif %}`
+        /{/% endif /%/}
 
-    {{ super() }}
-    `{% endblock repo %}`
+    /{/{ super() /}/}
+    /{/% endblock repo /%/}
     ```
 
 
