@@ -192,7 +192,6 @@ In the mkdocs-material theme you can create an override for main.html (see custo
     ```
 === "docs/overrides/main.html"
     ```
-    {% extends "base.html" %}
 
     {% block content %}
 
