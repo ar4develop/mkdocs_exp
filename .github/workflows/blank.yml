@@ -23,7 +23,7 @@ jobs:
       - run: pip install mkdocs-material 
       - run: pip install mkdocs-glightbox
       - run: pip install mkdocs-print-site-plugin
-      - run: pip install http html5lib requests
+      - run: pip install html5lib
       - run: pip install htmlark
       - run: pip install mkdocs-table-reader-plugin
       - run: pip install openpyxl
