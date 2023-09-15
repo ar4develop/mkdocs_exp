@@ -26,11 +26,11 @@ nav:
     #- Diagrams: '20_syntax/21_diagrams.md'
     - 20_syntax/customize.md
 
-  - Export docs:
-    - 30_addition/export_print_site.md
-    - 30_addition/export_with_pdf.md
-    - 30_addition/export_pdf_export.md
-    - 30_addition/weasyprint.md
+  #- Export docs:
+    #- 30_addition/export_print_site.md
+    #- 30_addition/export_with_pdf.md
+    #- 30_addition/export_pdf_export.md
+    #- 30_addition/weasyprint.md
     
   - Publication:
     - 30_addition/publication.md
@@ -234,7 +234,7 @@ plugins:
       path_to_pdf: "MkDocs_Tutorial.pdf" # Путь к сгенерированному PDF-документу
       include_css: true # Включает переопределение дефолтных CSS с целью кастомизации
       # Включает плагин
-      enabled: true # /!ENV [ENABLED_PRINT_SITE, True] #Commands: export ENABLED_PRINT_SITE=false; mkdocs serve
+      enabled: false # /!ENV [ENABLED_PRINT_SITE, True] #Commands: export ENABLED_PRINT_SITE=false; mkdocs serve
       #exclude: # Исключает страницы из PDF
       #- index.md    
 
@@ -243,8 +243,6 @@ plugins:
 
   # Export PDF 3
   #
-
-
 
 extra:
   version:

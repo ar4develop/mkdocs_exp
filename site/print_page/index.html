@@ -3222,18 +3222,16 @@ htmlark print_page.html -o standalone.html
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#30_addition-export_print_site-__codelineno-3-1"></a>{% extends &quot;base.html&quot; %}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#30_addition-export_print_site-__codelineno-3-1"></a>/{/% block content /%/}
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#30_addition-export_print_site-__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#30_addition-export_print_site-__codelineno-3-3"></a>{% block content %}
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#30_addition-export_print_site-__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#30_addition-export_print_site-__codelineno-3-5"></a>{% if page.url_to_pdf %}
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#30_addition-export_print_site-__codelineno-3-6"></a>    &lt;a href=&quot;{{ page.url_to_pdf }}&quot; title=&quot;Site PDF&quot; class=&quot;md-content__button md-icon&quot;&gt;
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#30_addition-export_print_site-__codelineno-3-7"></a>        {% include &quot;.icons/material/file-pdf-box.svg&quot; %}
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#30_addition-export_print_site-__codelineno-3-8"></a>    &lt;/a&gt;
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#30_addition-export_print_site-__codelineno-3-9"></a>{% endif %}
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#30_addition-export_print_site-__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#30_addition-export_print_site-__codelineno-3-11"></a>{{ super() }}
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#30_addition-export_print_site-__codelineno-3-12"></a>{% endblock content %}
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#30_addition-export_print_site-__codelineno-3-3"></a>/{/% if page.url_to_pdf /%/}
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#30_addition-export_print_site-__codelineno-3-4"></a>    &lt;a href=&quot;{{ page.url_to_pdf }}&quot; title=&quot;Site PDF&quot; class=&quot;md-content__button md-icon&quot;&gt;
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#30_addition-export_print_site-__codelineno-3-5"></a>        /{/% include &quot;.icons/material/file-pdf-box.svg&quot; /%/}
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#30_addition-export_print_site-__codelineno-3-6"></a>    &lt;/a&gt;
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#30_addition-export_print_site-__codelineno-3-7"></a>/{/% endif /%/}
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#30_addition-export_print_site-__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#30_addition-export_print_site-__codelineno-3-9"></a>/{/{ super() /}/}
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#30_addition-export_print_site-__codelineno-3-10"></a>/{/% endblock content /%/}
 </span></code></pre></div>
 </div>
 </div>
@@ -3255,19 +3253,17 @@ htmlark print_page.html -o standalone.html
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#30_addition-export_print_site-__codelineno-5-1"></a>{% extends &quot;base.html&quot; %}
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#30_addition-export_print_site-__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#30_addition-export_print_site-__codelineno-5-3"></a>{% block repo %}
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#30_addition-export_print_site-__codelineno-5-4"></a>    {% if page.url_to_pdf %}
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#30_addition-export_print_site-__codelineno-5-5"></a>        &lt;li class=&quot;nav-item&quot;&gt;
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#30_addition-export_print_site-__codelineno-5-6"></a>            &lt;a href=&quot;{{ page.url_to_pdf }}&quot; title=&quot;Site PDF&quot; class=&quot;nav-link&quot;&gt;
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#30_addition-export_print_site-__codelineno-5-7"></a>            &lt;i class=&quot;fas fa-file-pdf&quot;&gt;&lt;/i&gt; PDF
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#30_addition-export_print_site-__codelineno-5-8"></a>            &lt;/a&gt;
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#30_addition-export_print_site-__codelineno-5-9"></a>        &lt;/li&gt;
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#30_addition-export_print_site-__codelineno-5-10"></a>    {% endif %}
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#30_addition-export_print_site-__codelineno-5-11"></a>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#30_addition-export_print_site-__codelineno-5-12"></a>{{ super() }}
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#30_addition-export_print_site-__codelineno-5-13"></a>{% endblock repo %}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#30_addition-export_print_site-__codelineno-5-1"></a>/{/% block repo /%/}
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#30_addition-export_print_site-__codelineno-5-2"></a>    /{/% if page.url_to_pdf /%/}
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#30_addition-export_print_site-__codelineno-5-3"></a>        &lt;li class=&quot;nav-item&quot;&gt;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#30_addition-export_print_site-__codelineno-5-4"></a>            &lt;a href=&quot;{{ page.url_to_pdf }}&quot; title=&quot;Site PDF&quot; class=&quot;nav-link&quot;&gt;
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#30_addition-export_print_site-__codelineno-5-5"></a>            &lt;i class=&quot;fas fa-file-pdf&quot;&gt;&lt;/i&gt; PDF
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#30_addition-export_print_site-__codelineno-5-6"></a>            &lt;/a&gt;
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#30_addition-export_print_site-__codelineno-5-7"></a>        &lt;/li&gt;
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#30_addition-export_print_site-__codelineno-5-8"></a>    /{/% endif /%/}
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#30_addition-export_print_site-__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#30_addition-export_print_site-__codelineno-5-10"></a>/{/{ super() /}/}
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#30_addition-export_print_site-__codelineno-5-11"></a>/{/% endblock repo /%/}
 </span></code></pre></div>
 </div>
 </div>
