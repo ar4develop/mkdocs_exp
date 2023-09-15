@@ -17,7 +17,7 @@ nav:
     # - FAQ:   '_about/faq.md'  
     
   - About: 
-    -_about/about.md
+    - _about/about.md
 
   - Getting started: 
     - 10_start/install.md
@@ -40,7 +40,8 @@ nav:
     - 30_addition/publication.md
 
   - FAQ: 
-    -_about/faq.md
+    - _about/faq.md
+    
   - Links: 
     - _about/links.md  
   
