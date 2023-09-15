@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  <!-- Add announcement here, including arbitrary HTML -->
+  <p>Hello world! For update go to MySite</p>
+{% endblock %}
+
+
+{% block htmltitle %}
+<title>MkDocs Tutorial</title>
+{% endblock %} 
+
+
+{% block outdated %}
+  Самая актуальная версия документации
+  <a href="{{ '../' ~ base_url }}"> 
+    <strong>здесь</strong>.
+  </a>
+{% endblock %}
+
+{% block content %}
+
+{% if page.url_to_pdf %}
+    <a href="{{ page.url_to_pdf }}" title="Site PDF" class="md-content__button md-icon">
+        {% include ".icons/material/file-pdf-box.svg" %}
+    </a>
+{% endif %}
+
+{% if page.url_to_print_page %}
+    <a href="{{ page.url_to_print_page }}" title="Print Site" class="md-content__button md-icon">
+        {% include ".icons/material/printer.svg" %}
+    </a>
+{% endif %}
+
+{{ super() }}
+{% endblock content %}
+
+
+
+
+
+
+

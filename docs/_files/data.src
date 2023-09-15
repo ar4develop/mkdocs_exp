@@ -1,0 +1,5 @@
+
+//Code sample from data.src
+
+if(true)
+ Console.Writeln("Hello world");

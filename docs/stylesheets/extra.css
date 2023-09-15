@@ -1,0 +1,45 @@
+
+/* define the property */
+:root {
+
+  --toc-bg-color-primary: rgba(47, 127, 131, 0.5)
+  --toc-bg-color-secondary: rgba(47, 127, 131, 0.5)
+}
+
+.md-nav
+{
+   margin-bottom: 10px;
+   /* margin-top: 10px;  */
+
+  padding-top: 5px; 
+  padding-bottom: 10px;
+
+  /* border-block: solid;
+  writing-mode: horizontal-tb;    */
+} 
+
+.md-nav--primary
+{
+  
+  background-color:  rgba(59, 128, 132, 0.5); 
+  /* background-color: teal; */
+}
+
+ .md-nav--secondary
+{
+  background-color:  rgba(212, 227, 227, 0.3);
+}
+
+
+
+/* h1 {
+  font-weight: 900;
+  text-decoration: solid;
+} */
+
+
+/* h2, h3 {
+    text-decoration: underline;
+} */
+
+

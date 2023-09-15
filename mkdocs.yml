@@ -1,0 +1,270 @@
+site_name: MkDocs Tutorial 
+
+# Navigation menu        
+nav:
+  - Home: 
+    - index.md
+    #- About: '_about/about.md'
+    #- Install: '10_start/install.md'
+    #- Writing MkDocs standart:  '20_syntax/standart.md'
+    #- Advanced. Theme Material: '20_syntax/advance.md'
+    #- Export docs: '30_addition/export_print_site.md'
+    #- Publication: '30_addition/publication.md'
+    #- Links: '_about/links.md'  
+    #- FAQ:   '_about/faq.md'  
+    
+  - About: '_about/about.md'
+
+  - Getting started: 
+    - 10_start/install.md
+    
+  - Writing docs: 
+    - 20_syntax/standart.md
+
+  - Advanced:     
+    - 20_syntax/advance.md
+    #- Diagrams: '20_syntax/21_diagrams.md'
+    - 20_syntax/customize.md
+
+  - Export docs:
+    - 30_addition/export_print_site.md
+    - 30_addition/export_with_pdf.md
+    - 30_addition/export_pdf_export.md
+    - 30_addition/weasyprint.md
+    
+  - Publication:
+    - 30_addition/publication.md
+
+  - FAQ: '_about/faq.md'
+  - Links: '_about/links.md'  
+  
+theme:
+ 
+  name: material #mkdocs #readthedocs  #material
+  custom_dir: overrides
+
+  #palette:
+    # Palette toggle for automatic mode
+    #- media: "(prefers-color-scheme)"
+    #  toggle:
+    #    icon: material/brightness-auto
+    #    name: Switch to light mode
+
+    # Palette toggle for light mode
+    #- media: "(prefers-color-scheme: light)"
+    # Palette toggle for dark mode
+    #- media: "(prefers-color-scheme: dark)"        
+
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Light. Switch to dark mode
+      primary: teal
+      accent: blue
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Dark. Switch to light mode
+      primary: blue grey
+      accent: lime
+
+  icon:
+    annotation: material/arrow-right-circle      
+
+  logo: assets/logo.png
+  favicon: assets/logo_fav.png
+  
+  language: en
+
+  features:
+    - navigation.instant # ускорение загрузки (SPA)
+    - navigation.instant.prefetch # eature that will start to fetch a page once the user hovers over a link
+    - navigation.tracking # динамический URL страницы 
+    - navigation.tabs # перенос названий документов в горизонтальное меню
+    - navigation.tabs.sticky # горизонтальное меню не скрывается при прокрутке
+    - navigation.indexes # главные страницы разделов не отображаются в меню
+    - navigation.top # вкл. кнопку возврата наверх  
+    - navigation.sections # When sections are enabled, top-level sections are rendered as groups in the sidebar for viewports above 1220px, but remain as-is on mobile
+    - navigation.expand # When expansion is enabled, the left sidebar will expand all collapsible subsections by default, so the user doesn't have to open subsections manually
+    - navigation.path # When navigation paths are activated, a breadcrumb navigation is rendered above the title of each page, which might make orientation easier for users visiting your documentation on devices with smaller screens
+    - toc.follow # When anchor following for the table of contents is enabled, the sidebar is automatically scrolled so that the active anchor is always visible        
+    - toc.integrate 
+    - navigation.footer
+    - content.tooltips # Improved tooltips
+    - content.code.copy 
+    - content.code.select
+    - header.autohide
+    - announce.dismiss
+
+markdown_extensions:
+  - md_in_html
+  - def_list
+  - footnotes
+
+  - markdown_include.include:
+      base_path: docs
+
+  # Font icons
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  
+  # Formatting
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  # List       
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  # Content tabs
+  - pymdownx.tabbed:
+      alternate_style: true 
+ 
+  # Snippets
+  - abbr
+  - attr_list
+  
+  - pymdownx.snippets:
+      base_path: ["."]  #alternative - "./docs"
+      auto_append: ["./docs/includes/abbreviations.md"] # in directory ./docs/_about/
+
+  # Diagrams
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format      
+  
+
+  # Aadmonition, Annotations
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences      
+  
+  # Data tables
+  - tables
+
+  # Code blocks  
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  
+  # table of content
+  #- toc:
+      #permalink: "#"
+      #baselevel: 2
+      #separator: "-"      
+
+plugins:
+  - glightbox: # Enlarge image
+      touchNavigation: true # Enable or disable the touch navigation (swipe)
+      loop: false # Loop slides on end
+      effect: zoom #  (zoom, fade, none)
+      slide_effect: slide # (slide, zoom, fade, none)
+      width: 100% # 90% or 100vw for full width
+      height: auto # 90%, 100vh or auto.
+      zoomable: true # Enable or disable zoomable images
+      draggable: true # Enable or disable mouse drag to go prev and next slide.
+      skip_classes: # Disable lightbox of those image with specific custom class name.
+        - custom-skip-class-name
+        - img_index
+      auto_caption: false # Enable or disable using alt of image as caption title automatically
+      caption_position: bottom  # Default captions position. (bottom, top, left, right)
+
+  - search:
+      lang: 
+        - en
+        - ru
+
+  # - toc-md:
+  #     toc_page_title: Contents
+  #     #toc_page_description: Usage mkdocs-toc-md
+  #     header_level: 3  #Header level (depth) to render.
+  #     pickup_description_meta: false
+  #     pickup_description_class: false
+  #     output_path: index.md
+  #     output_log: false
+  #     ignore_page_pattern: index.*.md$
+  #     remove_navigation_page_pattern: index.*.md$
+  #     template_dir_path: custom_template
+  #     integrate_mkdocs_static_i18n: true
+  #     languages:
+  #       en:
+  #         toc_page_title: Contents
+  #         #toc_page_description: Usage mkdocs-toc-md
+  #       ru:
+  #         toc_page_title: Содержание
+  #         #toc_page_description: 
+  #     shift_header: after_h1_of_index
+  #     extend_module: true
+  #     output_comment: html        
+
+  - table-reader        
+  # - pdf-export:
+  #     verbose: true
+  #     media_type: print
+  #     enabled_if_env: 0
+  #     combined: 1
+      #combined_output_path: pdf/combined.pdf           
+
+  # Export PDF 1
+  - print-site:     
+      add_to_navigation: true # Пункт "Распечатать PDF" в меню, см. след. парам. 
+      print_page_title: 'To PDF' # Название пункта, см. пред. парам.
+      add_print_site_banner: true # Выключает ненужный:) баннер на странице печати
+      print_site_banner_template: "docs/assets/templates/print_site_banner.tpl"
+      add_table_of_contents: true # Включает отображение содержания
+      toc_title: 'Содержание' # Название раздела с содержанием
+      toc_depth: 6 # Количество уровней заголовков в содержании
+      add_full_urls: false # Отображение адресов ссылок, например: ссылка (https://site) 
+      enumerate_headings: false # Отключает нумерацию заголовков 
+      enumerate_figures: true # Включает нумерацию рисунков
+      add_cover_page: true # Включает отображение титульной страницы 
+      cover_page_template: "docs/assets/templates/pdf_cover_page.tpl" # Путь к шаблону титульной страницы
+      path_to_pdf: "MkDocs_Tutorial.pdf" # Путь к сгенерированному PDF-документу
+      include_css: true # Включает переопределение дефолтных CSS с целью кастомизации
+      # Включает плагин
+      enabled: true # /!ENV [ENABLED_PRINT_SITE, True] #Commands: export ENABLED_PRINT_SITE=false; mkdocs serve
+      #exclude: # Исключает страницы из PDF
+      #- index.md    
+
+  # Export PDF 2
+  #- with-pdf
+
+  # Export PDF 3
+  #
+
+
+
+extra:
+  version:
+    provider: mike
+    default: latest
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:<ar4develop@gmail.com>    
+      name: ar4develop@gmail.com
+
+  generator: false # displays a Made with Material for MkDocs notice
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/glightbox.min.css
+  #- https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/tablesort.min.js  #- https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+
+copyright: Copyright &copy; 2023 ar4develop@gmail.com
