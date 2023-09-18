@@ -2,7 +2,7 @@
 
 Source link: Documentation mkdocs-print-site-plugin <https://timvink.github.io/mkdocs-print-site-plugin/print_page.html#>
 
-Local article: [Print Site](../_articles/Print Site - Documentation mkdocs-print-site-plugin.htm)
+Local article: [Print Site](../00_articles/Print Site - Documentation mkdocs-print-site-plugin.htm)
 
 
 **Installation**

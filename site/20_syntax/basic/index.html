@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://ar4develop.github.io/mkdocs_exp/site/20_syntax/basic/">
+        <link rel="canonical" href="https://ar4develop.github.io/mkdocs_exp/20_syntax/basic/">
       
       
         <link rel="prev" href="../../10_start/install/">
@@ -299,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../_about/about/" class="md-tabs__link">
+        <a href="../../00_about/about/" class="md-tabs__link">
           
   
     
@@ -421,7 +421,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../_about/faq/" class="md-tabs__link">
+        <a href="../../00_about/faq/" class="md-tabs__link">
           
   
     
@@ -441,7 +441,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../_about/links/" class="md-tabs__link">
+        <a href="../../00_about/links/" class="md-tabs__link">
           
   
     
@@ -624,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_about/about/" class="md-nav__link">
+      <a href="../../00_about/about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1300,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_about/faq/" class="md-nav__link">
+      <a href="../../00_about/faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1367,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../_about/links/" class="md-nav__link">
+      <a href="../../00_about/links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1473,14 +1473,16 @@ Three line</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>**This is bold text**   
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>*This is italic text*   
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>***This is bold italic text***  
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>~~this is strikethrough~~   
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>~~***This is strikethrough bold italic text***~~    
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>~~This is strikethrough~~   
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>~~***This is strikethrough bold italic text***~~   
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>==This was marked== 
 </span></code></pre></div>
 <p><strong>This is bold text</strong> <br />
 <em>This is italic text</em> <br />
 <strong><em>This is bold italic text</em></strong><br />
-<del>this is strikethrough</del> <br />
-<del><strong><em>This is strikethrough bold italic text</em></strong></del>    </p>
+<del>This is strikethrough</del> <br />
+<del><strong><em>This is strikethrough bold italic text</em></strong></del>  <br />
+<mark>This text was marked</mark> </p>
 <p>Emphasis can be used in the middle of a word:</p>
 <div class="language-text highlight"><pre><span></span><code>un**frigging**believable
 </code></pre></div>
@@ -1544,9 +1546,9 @@ end tell
 </code></pre></div>
 <p>This is <a href="http://example.com/" title="Title">an example</a> inline link and e-mail: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#108;&#110;&#111;&#100;&#97;&#64;&#97;&#108;&#110;&#111;&#100;&#97;&#46;&#99;&#111;&#109;">&#97;&#108;&#110;&#111;&#100;&#97;&#64;&#97;&#108;&#110;&#111;&#100;&#97;&#46;&#99;&#111;&#109;</a>.  <br />
 <a href="http://example.net/">This link</a> has no title attribute.</p>
-<div class="language-text highlight"><pre><span></span><code>See my [About](../_about/about/) page for details.
+<div class="language-text highlight"><pre><span></span><code>See my [About](../00_about/about/) page for details.
 </code></pre></div>
-<p>See my <a href="../../_about/about/">About</a> page for details.     </p>
+<p>See my <a href="../../00_about/about/">About</a> page for details.     </p>
 <div class="language-text highlight"><pre><span></span><code>This is [an example][id] reference-style link.
 </code></pre></div>
 <p>Then, anywhere in the document, you define your link label like this, on a line by itself:</p>
@@ -1570,18 +1572,18 @@ In text e-mail: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#100;&#10
 <h3 id="internal-links">Internal links</h3>
 <p>MkDocs allows you to interlink your documentation by using regular Markdown links. However, there are a few additional benefits to formatting those links specifically for MkDocs as outlined below.</p>
 <p>Linking to pages</p>
-<div class="language-text highlight"><pre><span></span><code>Please see the [about](../_about/about.md) for further details.
+<div class="language-text highlight"><pre><span></span><code>Please see the [about](../00_about/about.md) for further details.
 </code></pre></div>
-<p>Please see the <a href="../../_about/about/">about</a> for further details.</p>
+<p>Please see the <a href="../../00_about/about/">about</a> for further details.</p>
 <p>Link to a section within a target document by using an anchor link.</p>
 <div class="language-text highlight"><pre><span></span><code>[Commands](../10_start/install.md#Commands)
 </code></pre></div>
 <p>Please see the for use MkDocs <a href="../../10_start/install/#Commands">Commands</a>.</p>
 <h3 id="images-as-links">Images as Links</h3>
 <p>To use an image as a link, use the following syntax:</p>
-<div class="language-text highlight"><pre><span></span><code>[![ImageCaption A kitten](../_images/kitten_300.jpg)](http://www.linktarget.com)
+<div class="language-text highlight"><pre><span></span><code>[![ImageCaption A kitten](../00_images/kitten_300.jpg)](http://www.linktarget.com)
 </code></pre></div>
-<p><a href="http://www.placekitten.com"><img alt="ImageCaption A kitten" src="../../_images/kitten_300.jpg" /></a></p>
+<p><a href="http://www.placekitten.com"><img alt="ImageCaption A kitten" src="../../00_images/kitten_300.jpg" /></a></p>
 <h2 id="inline-html">Inline <abbr title="Hyper Text Markup Language">HTML</abbr></h2>
 <p>Markdown’s syntax is intended for one purpose: to be used as a format for writing for the web.</p>
 <p>The only restrictions are that block-level <abbr title="Hyper Text Markup Language">HTML</abbr> elements — e.g. <code>&lt;div&gt;, &lt;table&gt;, &lt;pre&gt;, &lt;p&gt;, etc.</code> — must be separated from surrounding content by blank lines, and the start and end tags of the block should not be indented with tabs or spaces. Markdown is smart enough not to add extra (unwanted) <code>&lt;p&gt;</code> tags around <abbr title="Hyper Text Markup Language">HTML</abbr> block-level tags.</p>
@@ -1728,7 +1730,7 @@ id sem consectetuer libero luctus adipiscing.</p>
 <p>Inline image syntax looks like this:</p>
 <div class="language-text highlight"><pre><span></span><code>![Alt text](/path/to/img.jpg)
 </code></pre></div>
-<p><a class="glightbox" href="../../_images/zelda-light-world.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../_images/zelda-light-world.png" title="Optional title" /></a></p>
+<p><a class="glightbox" href="../../00_images/zelda-light-world.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../00_images/zelda-light-world.png" title="Optional title" /></a></p>
 <p>Reference-style image syntax looks like this:</p>
 <div class="language-text highlight"><pre><span></span><code>![Alt text][id]
 </code></pre></div>

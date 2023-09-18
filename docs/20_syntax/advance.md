@@ -4,7 +4,7 @@
 
 Material for MkDocs link: <https://squidfunk.github.io/mkdocs-material/>
 
-Local article [Getting started.](../_articles/Installation%20-%20Material%20for%20MkDocs.html)
+Local article [Getting started.](../00_articles/Installation%20-%20Material%20for%20MkDocs.html)
 
 
 ## Formatting
@@ -13,7 +13,7 @@ Source link: [https://squidfunk.github.io/mkdocs-material/reference/formatting/]
 
 
 
-Local article [Formatting.](../_articles/Formatting - Material for MkDocs.html)
+Local article [Formatting.](../00_articles/Formatting - Material for MkDocs.html)
 
 Configuration
 
@@ -28,14 +28,21 @@ markdown_extensions:
 
 ### Text with highlighting
 
-    - ==This was marked==
-    - ^^This was inserted^^
-    - ~~This was deleted~~
+```
+**This is bold text**   
+*This is italic text*   
+***This is bold italic text***  
+~~This is strikethrough~~   
+~~***This is strikethrough bold italic text***~~   
+==This was marked== 
+```
 
-- ==This was marked==
-- ^^This was inserted^^
-- ~~This was deleted~~    
-
+**This is bold text**   
+*This is italic text*   
+***This is bold italic text***  
+~~this is strikethrough~~   
+~~***This is strikethrough bold italic text***~~    
+==This text was marked== 
 
 ### Sub- and superscripts
 
@@ -72,7 +79,7 @@ Source links:
 <https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/>   
 <https://mkdocs-magicspace.alnoda.org/tutorials/markdown/classy-markdown/>  
 
-Local article [Icons, Emojis.](../_articles/Icons, Emojis - Material for MkDocs.html)
+Local article [Icons, Emojis.](../00_articles/Icons, Emojis - Material for MkDocs.html)
 
 One of the best features of Material for MkDocs is the possibility to use more than 10,000 icons and thousands of emojis in your project documentation with practically zero additional effort. Moreover, custom icons can be added and used in mkdocs.yml, documents and templates.
 
@@ -471,7 +478,7 @@ markdown_extensions:
 
 > *Source link:* <https://squidfunk.github.io/mkdocs-material/reference/admonitions/>
 
-> *Local article* [Admonitions.](../_articles/Admonitions - Material for MkDocs.html)
+> *Local article* [Admonitions.](../00_articles/Admonitions - Material for MkDocs.html)
 
 ---
 
@@ -808,24 +815,24 @@ content from other files (including source files) can be embedded by using the -
 
 
     ``` title="data.src"
-    `--8<-- "./_files/data.src"`
+    `--8<-- "./00_files/data.src"`
     ```
 
     ``` title="data.src"
-    --8<-- "./20_syntax/data.src"
+    --8<-- "./00_files/data.src"
     ```
 
 or
 
     /--8<--
-    ./_files/data.src
-    ./docs/includes/example_file.html
+    ./00_files/data.src
+    ./00_files/example_file.html
     /--8<--
 
 ??? example
     --8<--
-    ./docs/_files/data.src
-    ./docs/includes/example_file.html
+    ./docs/00_files/data.src
+    ./docs/00_files/example_file.html
     --8<--
 
 
@@ -867,9 +874,209 @@ In order to render a link as a button, suffix it with curly braces and add the .
 
 [Go to tables :fontawesome-solid-paper-plane:](#data-tables){ .md-button }
 
+
+## Data tables
+
+Material for MkDocs defines default styles for data tables – an excellent way of rendering tabular data in project documentation. Furthermore, customizations like sortable tables can be achieved with a third-party library and some additional JavaScript.
+
+**Configuration**
+
+This configuration enables Markdown table support, which should normally be enabled by default, but to be sure, add the following lines to mkdocs.yml:
+
+markdown_extensions:
+  - tables
+
+**Usage**
+
+=== "Left"
+
+    ```
+    | Method      | Description                          |
+    | :---------- | :----------------------------------- |
+    | `GET`       | :material-check:     Fetch resource  |
+    | `PUT`       | :material-check-all: Update resource |
+    | `DELETE`    | :material-close:     Delete resource |
+    ```
+
+=== "Center"
+    ```
+    | Method      | Description                          |
+    | :---------: | :----------------------------------: |
+    | `GET`       | :material-check:     Fetch resource  |
+    | `PUT`       | :material-check-all: Update resource |
+    | `DELETE`    | :material-close:     Delete resource |
+    ```
+
+=== "Right"
+
+    ```
+    | Method      | Description                          |
+    | ----------: | -----------------------------------: |
+    | `GET`       | :material-check:     Fetch resource  |
+    | `PUT`       | :material-check-all: Update resource |
+    | `DELETE`    | :material-close:     Delete resource |
+    ```
+
+
+**Sortable tables**
+
+If you want to make data tables sortable, you can add tablesort, which is natively integrated with Material for MkDocs and will also work with instant loading via additional JavaScript:
+
+docs/javascripts/tablesort.js
+
+```
+document$.subscribe(function() {
+  var tables = document.querySelectorAll("article table:not([class])")
+  tables.forEach(function(table) {
+    new Tablesort(table)
+  })
+})
+```
+
+mkdocs.yml
+
+```
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+```
+
+Table Centered, Sorted:
+
+| Method      | Description                          |
+| :---------: | :----------------------------------: |
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
+
+
+
+### Import table from file
+ 
+You can also import data from a CSV or Excel file using the plugin mkdocs-table-reader-plugin.
+
+First, you will need to install it with pip:
+
+    pip install mkdocs-table-reader-plugin
+
+Then extend the mkdocs.yml file like this:
+
+    plugins:
+    - table-reader
+
+Then, it is a simple process to import the data in to the Markdown files.
+
+Where the path is relative to the location of your project's mkdocs.yml file (although you can change that to be relative to your docs/ directory).
+
+
+=== "Import data from  CSV file"
+
+    ``` csv title="data.csv"
+  
+    col1,col2,col3 
+    r1c1,r1c2,r1c3 
+    r2c1,r2c2,r2c3 
+    r3c1,r3c2,r3c3 
+
+    ```
+    add it to your Markdown page this (withot symbol slash (/)):
+    
+    */{/{ read_csv('../00_files/data.csv') /}/}*
+
+    Result from data.csv
+
+    {{ read_csv('./docs/00_files/data.csv') }}
+
+
+=== "Import data from  Excel file"
+
+    ```
+    pip install openpyxl
+
+    ../00_files/data.xlsx
+
+    add it to your Markdown page this (withot symbol slash (/)):
+
+    /{/{ read_excel('../00_files/data.xlsx', engine='openpyxl') /}/}
+
+    For document with sheets.
+
+    /{/{ read_excel('./Book1.xlsx', engine='openpyxl', sheet_name="Sheet1") /}/}
+
+    ```
+    Result from data.xlsx
+
+    {{ read_excel('../00_files/data.xlsx', engine='openpyxl') }}
+
+=== "Import data from other file types"
+
+    The plugin mkdocs-table-reader-plugin also provides readers for other formats:
+
+    *read_csv, read_fwf, read_yaml, read_table, read_json, read_excel, read_raw*
+
+    You can read more on their Docs website: [mkdocs-table-reader-plugin](https://timvink.github.io/mkdocs-table-reader-plugin/)
+
+
+
+
+### Readers
+
+Install the plugin using pip:
+
+    pip install mkdocs-table-reader-plugin
+
+``` title="mkdocs.yml"
+    plugins:
+      - table-reader
+```    
+
+The following table reader functions are available:
+
+**read_csv**
+
+    /{/{ read_csv('tables/basic_table.csv') /}/}
+
+
+**read_fwf**
+
+    /{/{ read_fwf('tables/fixedwidth_table.txt') /}/}
+
+**read_yaml**
+    
+    /{/{ read_yaml('tables/yaml_table.yml') /}/}
+
+**read_table**
+
+    /{/{ read_table('tables/basic_table.csv', sep = ',') /}/}
+
+**read_json**
+
+    /{/{ read_json('tables/data.json', orient='split') /}/}
+
+
+**read_excel**
+
+    /{/{ read_excel('tables/excel_table.xlsx', engine='openpyxl') /}/}
+
+**read_raw**
+
+{{ read_raw() }} inserts contents from a file directly. This is great if you have a file with a table already in markdown format. It could also replace a workflow where you use the snippets extension to embed external files.
+
+    /{/{ read_raw('tables/markdown_table.md') /}/}
+
+
+### Embed File
+
+    /--8<--
+    /./docs/20_syntax/21_tables.md
+    /./docs/20_syntax/21_diagrams.md
+    /--8<--
+
+
+
 --8<--
 ./docs/20_syntax/21_images.md
-./docs/20_syntax/21_tables.md
+
 ./docs/20_syntax/21_diagrams.md
 --8<--
 

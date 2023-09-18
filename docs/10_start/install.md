@@ -37,9 +37,10 @@ or
 * `mkdocs -h` - Print help message and exit.
 
 
-> **Optional:**
-> mkdocs serve -a 0.0.0.0:<PORT> - Start the live-reloading docs server.
-> mkdocs build -d <OUTPUT_PATH> - Build the documentation site.
+> **Optional:** 
+>
+> + `mkdocs serve -a 0.0.0.0:<PORT>` - Start the live-reloading docs server.  
+> + `mkdocs build -d <OUTPUT_PATH>` - Build the documentation site.   
 
 
 ## Project layout

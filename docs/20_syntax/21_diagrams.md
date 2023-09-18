@@ -6,7 +6,7 @@ Source links:
 [MagicSpace Draw. Diagrams](https://mkdocs-magicspace.alnoda.org/tutorials/markdown/diagrams/)
 [MkDocs Material. Diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/)
 
-Local article [MkDocs Material. Diagrams](../_articles/Diagrams - Material for MkDocs.html)
+Local article [MkDocs Material. Diagrams](../00_articles/Diagrams - Material for MkDocs.html)
 
 Diagrams help to communicate complex relationships and interconnections between different technical components, and are a great addition to project documentation. Material for MkDocs integrates with Mermaid.js, a very popular and flexible solution for drawing diagrams.
 

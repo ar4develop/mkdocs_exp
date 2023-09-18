@@ -3,7 +3,7 @@
 ---------------------------------------------------------
 
 
-**To realize [DocOps](_about/about.md) idea.**
+**To realize [DocOps](00_about/about.md) idea.**
 
 ![Image title](assets/img/img_index.jpg){ align=left width="90" class="img_index"}
 

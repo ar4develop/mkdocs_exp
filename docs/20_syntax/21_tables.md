@@ -89,6 +89,8 @@ Then extend the mkdocs.yml file like this:
 
 Then, it is a simple process to import the data in to the Markdown files.
 
+Where the path is relative to the location of your project's mkdocs.yml file (although you can change that to be relative to your docs/ directory).
+
 
 === "Import data from  CSV file"
 
@@ -102,12 +104,11 @@ Then, it is a simple process to import the data in to the Markdown files.
     ```
     add it to your Markdown page this (withot symbol slash (/)):
     
-    */{/{ read_csv('./docs/_files/data.csv') /}/}*
+    */{/{ read_csv('../00_files/data.csv') /}/}*
 
     Result from data.csv
 
-    {{ read_csv('./docs/_files/data.csv') }}
-
+    {{ read_csv('./docs/00_files/data.csv') }}
 
 
 === "Import data from  Excel file"
@@ -115,11 +116,11 @@ Then, it is a simple process to import the data in to the Markdown files.
     ```
     pip install openpyxl
 
-    ./docs/_files/data.xlsx
+    ../00_files/data.xlsx
 
     add it to your Markdown page this (withot symbol slash (/)):
 
-    /{/{ read_excel('./docs/_files/data.xlsx', engine='openpyxl') /}/}
+    /{/{ read_excel('../00_files/data.xlsx', engine='openpyxl') /}/}
 
     For document with sheets.
 
@@ -128,7 +129,7 @@ Then, it is a simple process to import the data in to the Markdown files.
     ```
     Result from data.xlsx
 
-    {{ read_excel('./docs/_files/data.xlsx', engine='openpyxl') }}
+    {{ read_excel('../00_files/data.xlsx', engine='openpyxl') }}
 
 === "Import data from other file types"
 
@@ -139,6 +140,8 @@ Then, it is a simple process to import the data in to the Markdown files.
     You can read more on their Docs website: [mkdocs-table-reader-plugin](https://timvink.github.io/mkdocs-table-reader-plugin/)
 
 
+
+
 ### Readers
 
 Install the plugin using pip:
@@ -147,7 +150,7 @@ Install the plugin using pip:
 
 ``` title="mkdocs.yml"
     plugins:
-    - table-reader
+      - table-reader
 ```    
 
 The following table reader functions are available:

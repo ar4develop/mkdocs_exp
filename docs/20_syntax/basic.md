@@ -56,15 +56,17 @@ Markdown treats asterisks (*) and underscores (_) as indicators of emphasis. Tex
 **This is bold text**   
 *This is italic text*   
 ***This is bold italic text***  
-~~this is strikethrough~~   
-~~***This is strikethrough bold italic text***~~    
+~~This is strikethrough~~   
+~~***This is strikethrough bold italic text***~~   
+==This was marked== 
 ```
 
 **This is bold text**   
 *This is italic text*   
 ***This is bold italic text***  
-~~this is strikethrough~~   
+~~This is strikethrough~~   
 ~~***This is strikethrough bold italic text***~~    
+==This text was marked== 
 
 Emphasis can be used in the middle of a word:
 
@@ -156,9 +158,9 @@ To improve platform compatibility (and to save one keystroke) it is also possibl
 This is [an example](http://example.com/ "Title") inline link and e-mail: <alnoda@alnoda.com>.    
 [This link](http://example.net/) has no title attribute.
 
-    See my [About](../_about/about/) page for details. 
+    See my [About](../00_about/about/) page for details. 
 
-See my [About](../_about/about.md/) page for details.     
+See my [About](../00_about/about.md/) page for details.     
 
     This is [an example][id] reference-style link.
 
@@ -197,9 +199,9 @@ MkDocs allows you to interlink your documentation by using regular Markdown link
 
 Linking to pages
 
-    Please see the [about](../_about/about.md) for further details.
+    Please see the [about](../00_about/about.md) for further details.
 
-Please see the [about](../_about/about.md) for further details.
+Please see the [about](../00_about/about.md) for further details.
 
  Link to a section within a target document by using an anchor link.
 
@@ -214,9 +216,9 @@ Please see the [about](../_about/about.md) for further details.
 
 To use an image as a link, use the following syntax:
 
-    [![ImageCaption A kitten](../_images/kitten_300.jpg)](http://www.linktarget.com)
+    [![ImageCaption A kitten](../00_images/kitten_300.jpg)](http://www.linktarget.com)
 
-[![ImageCaption A kitten](../_images/kitten_300.jpg)](http://www.placekitten.com)
+[![ImageCaption A kitten](../00_images/kitten_300.jpg)](http://www.placekitten.com)
 
 
 ## Inline HTML
@@ -394,7 +396,7 @@ Inline image syntax looks like this:
 
     ![Alt text](/path/to/img.jpg)
 
-![Alt text](../_images/zelda-light-world.png "Optional title")
+![Alt text](../00_images/zelda-light-world.png "Optional title")
 
 Reference-style image syntax looks like this:
 

@@ -2,7 +2,7 @@
 
 *Source link:* <https://squidfunk.github.io/mkdocs-material/reference/images/>
 
-*Local article:* [Images](../_articles/Images - Material for MkDocs.html)
+*Local article:* [Images](../00_articles/Images - Material for MkDocs.html)
 
 ---
 
@@ -51,5 +51,5 @@ Light and dark mode
     ![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa#only-light){ width="300" }
     ![Image title](https://dummyimage.com/600x400/21222c/d5d7e2#only-dark){ width="300" }
 
-![Image title](../_images/zelda-light-world.png#only-light){ width="300" }
-![Image title](../_images/zelda-dark-world.png#only-dark){ width="300" }
+![Image title](../00_images/zelda-light-world.png#only-light){ width="300" }
+![Image title](../00_images/zelda-dark-world.png#only-dark){ width="300" }

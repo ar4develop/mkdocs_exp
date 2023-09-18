@@ -4,7 +4,7 @@
 
 Material for MkDocs link: <https://squidfunk.github.io/mkdocs-material/customization/>
 
-Local article [Customization.](../_articles/Customization - Material for MkDocs.htm) 
+Local article [Customization.](../00_articles/Customization - Material for MkDocs.htm) 
 
 
 ## Custom colors
